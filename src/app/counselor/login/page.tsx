@@ -26,8 +26,13 @@ export default function CounselorLoginPage() {
             setError("Please enter a password");
             return;
         }
-        // Store selected counselor in sessionStorage for demo
-        sessionStorage.setItem("counselorId", selectedCounselor);
+        // Store counselor as currentUser in sessionStorage for proper authentication
+        const currentUser = {
+            id: selectedCounselor,
+            role: 'counselor'
+        };
+        sessionStorage.setItem("currentUser", JSON.stringify(currentUser));
+        sessionStorage.setItem("counselorId", selectedCounselor); // Keep for backward compatibility
         router.push("/counselor");
     };
 
