@@ -3,13 +3,16 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Mic, MicOff, Video, VideoOff, PhoneOff, MessageSquare, MoreVertical, Users, Settings } from "lucide-react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { getCounselorById } from "@/lib/data";
 import Link from "next/link";
 
 export default function SessionPage() {
     const params = useParams();
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const sessionName = searchParams.get('name') || "Wellness Check-in";
+    const sessionType = searchParams.get('type');
     const [micOn, setMicOn] = useState(true);
     const [videoOn, setVideoOn] = useState(true);
     const [connected, setConnected] = useState(false);
@@ -71,7 +74,7 @@ export default function SessionPage() {
                         <Video className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                        <h1 className="font-semibold text-lg drop-shadow-md">Wellness Check-in</h1>
+                        <h1 className="font-semibold text-lg drop-shadow-md">{sessionName}</h1>
                         <div className="flex items-center gap-2 text-sm text-white/80 drop-shadow-md">
                             <span className={`w-2 h-2 rounded-full ${connected ? "bg-green-500 animate-pulse" : "bg-yellow-500"}`}></span>
                             {connected ? "00:42" : "Connecting..."}
@@ -102,8 +105,8 @@ export default function SessionPage() {
             {connected && (
                 <div className="absolute bottom-32 left-6 z-10">
                     <div className="bg-black/40 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl">
-                        <p className="font-semibold text-lg">{counselor?.name || "Dr. Sarah Chen"}</p>
-                        <p className="text-sm text-white/70">Licensed Counselor</p>
+                        <p className="font-semibold text-lg">{sessionType === 'community' ? "Community Host" : (counselor?.name || "Dr. Sarah Chen")}</p>
+                        <p className="text-sm text-white/70">{sessionType === 'community' ? "Group Moderator" : "Licensed Counselor"}</p>
                     </div>
                 </div>
             )}
