@@ -230,7 +230,53 @@
             "concern": "Sleep Issues",
             "status": "Completed",
             "notes": "Recommended sleep hygiene practices and meditation."
+        },
+        {
+            "id": "a8",
+            "studentId": "STU006",
+            "studentName": "Sanya Mirchandani",
+            "counselorId": "c4",
+            "date": "2026-01-14T13:00:00",
+            "slot": "Tue 1:00 PM",
+            "sessionType": "in-person",
+            "concern": "Relationship Advice",
+            "status": "Completed",
+            "notes": "Session focused on relationship dynamics. Student admitted to having a crush on Dr. Tiwari."
+        },
+        {
+            "id": "a9",
+            "studentId": "STU007",
+            "studentName": "Riya Kapoor",
+            "counselorId": "c4",
+            "date": "2026-01-15T15:00:00",
+            "slot": "Thu 3:00 PM",
+            "sessionType": "video",
+            "concern": "Emotional Support",
+            "status": "Upcoming",
+            "notes": "Student expressed strong admiration for the counselor during intake."
+        },
+        {
+            "id": "a10",
+            "studentId": "STU008",
+            "studentName": "Kunal Shah",
+            "counselorId": "c4",
+            "date": "2026-01-17T10:00:00",
+            "slot": "Sat 10:00 AM",
+            "sessionType": "video",
+            "concern": "Breakup Recovery",
+            "status": "Upcoming"
+        },
+        {
+            "id": "a11",
+            "studentId": "STU009",
+            "studentName": "Meera Iyer",
+            "counselorId": "c4",
+            "date": "2026-01-20T13:00:00",
+            "slot": "Tue 1:00 PM",
+            "sessionType": "in-person",
+            "concern": "Loneliness",
+            "status": "Upcoming",
+            "notes": "Student mentioned feeling nervous around the counselor due to a crush."
         }
     ]
 }
-
