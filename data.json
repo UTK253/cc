@@ -72,7 +72,7 @@
             "password": "1234",
             "role": "counselor",
             "specialty": "Relationships & Women's Support",
-            "image": "https://api.dicebear.com/7.x/micah/svg?seed=Vishal&backgroundColor=ffdfbf",
+            "image": "https://api.dicebear.com/7.x/micah/svg?seed=Joshua&backgroundColor=ffdfbf",
             "availableSlots": [
                 "Tue 1:00 PM",
                 "Thu 3:00 PM",
@@ -233,3 +233,4 @@
         }
     ]
 }
+
