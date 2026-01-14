@@ -64,6 +64,22 @@
             ],
             "rating": 4.7,
             "bio": "Helping students navigate relationship challenges and social anxiety."
+        },
+        {
+            "id": "c4",
+            "name": "Dr. Vishal Tiwari",
+            "email": "vishal@university.edu",
+            "password": "1234",
+            "role": "counselor",
+            "specialty": "Relationships & Women's Support",
+            "image": "https://api.dicebear.com/7.x/micah/svg?seed=Vishal&backgroundColor=ffdfbf",
+            "availableSlots": [
+                "Tue 1:00 PM",
+                "Thu 3:00 PM",
+                "Sat 10:00 AM"
+            ],
+            "rating": 4.9,
+            "bio": "Relationship expert specializing in interpersonal dynamics. Highly sought after for providing a safe and supportive counseling environment for female students."
         }
     ],
     "resources": [
@@ -132,7 +148,7 @@
     ],
     "stats": {
         "studentsHelped": 1240,
-        "activeCounselors": 15,
+        "activeCounselors": 16,
         "avgWaitTime": "24h"
     },
     "allAppointments": [
