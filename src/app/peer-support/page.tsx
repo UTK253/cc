@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { getAppData } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -61,7 +62,9 @@ export default function PeerSupportPage() {
                                                     </CardDescription>
                                                 </div>
                                             </div>
-                                            <Button variant="outline">Join</Button>
+                                            <Link href={`/session/community-${idx}?type=community&name=${encodeURIComponent(forum.title)}`}>
+                                                <Button variant="outline">Join</Button>
+                                            </Link>
                                         </CardHeader>
                                     </Card>
                                 ))}
